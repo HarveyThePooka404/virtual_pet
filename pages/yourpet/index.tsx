@@ -15,7 +15,7 @@ function YourPet() {
         </Head>
 
         <main className={`${styles.main} justify-center`} >
-            <Image src="/assets/pet.png" alt="Picture of your pet" height="300px" width="200px"/>
+            <Image src="/assets/pet.png" alt="Picture of your pet" height="300px" width="275px"/>
             <Button.Group className="button_container">
                 <Button> Feed </Button>
                 <Button> Clean </Button>
