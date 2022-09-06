@@ -8,7 +8,7 @@ import Link from 'next/link'
 
 const Home: NextPage = () => {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>Your Virtual Pet</title>
         <meta name="description" content="Create and help grow a Virtual Pet" />
@@ -21,9 +21,11 @@ const Home: NextPage = () => {
         </h1>
 
         <div className="button_container">
-          <Button> Get Started </Button>
-          <Link href="/about">
-            <Button variant="outline"> Learn More </Button>
+          <Link href="/yourpet" passHref>
+            <Button component="a"> Get Started </Button>
+          </Link>
+          <Link href="/about" passHref>
+            <Button variant="outline" component="a"> Learn More </Button>
           </Link>
         </div>
       </main>
@@ -38,14 +40,13 @@ const Home: NextPage = () => {
       max-width: 300px;
     }
 
-    .button_container > button:last-child {
+    .button_container > a:last-child {
       margin-left: 10px;
     }
     `
-
     }
     </style>
-    </div>
+  </div>
   )
 }
 
